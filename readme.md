@@ -6,7 +6,7 @@ My midterm project is to build a calculator program that can add, subtract, mult
 
 ## Instructor Video - 
 
-## Project Description -  
+## Project Description -  https://docs.google.com/document/d/1uFXUuwkxlKNpF3zq2S4XBpFRHNpXZBPnMQLOdORx93E/edit?tab=t.0
 
 ## Testing
 1. pytest
