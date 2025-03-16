@@ -1,29 +1,29 @@
-'''Command App'''
+'''The command is a design pattern used to encapsulate requests as objects.'''
+import logging
 from abc import ABC, abstractmethod
 from calculator import add, subtract, multiply, divide
 
+logging.basicConfig(level=logging.ERROR, format="%(asctime)s - %(levelname)s - %(message)s")
+
 class Command(ABC): # pylint: disable=too-few-public-methods
-    '''command function'''
+    '''Abstract base class for all command operations.'''
     @abstractmethod
     def execute(self):
         '''execute function'''
 
 
 class CommandHandler:
-    '''CommandHandler'''
+    '''CommandHandler is use in executing commands'''
     def __init__(self):
         self.commands = {}
 
     def register_command(self, command_name: str, command: Command):
-        '''Register Command'''
+        '''Register new command'''
         self.commands[command_name] = command
 
     def execute_command(self, command_name: str):
-        """ Look before you leap (LBYL) - Use when its less likely to work
-        if command_name in self.commands:
-            self.commands[command_name].execute()
-        else:
-            print(f"No such command: {command_name}")
+        """ 
+        Look before you leap (LBYL) - Executes a registered command and handling errors.
         """
         #Easier to ask for forgiveness than permission
         # (EAFP) - Use when its going to most likely work
