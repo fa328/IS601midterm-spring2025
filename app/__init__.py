@@ -1,5 +1,5 @@
 '''
-    Constructor: Sets up logging, loads environment variables, and configures the command handler.
+    This code sets up logging, loads environment variables, and configures the command handler.
 '''
 import os
 import pkgutil
@@ -70,7 +70,7 @@ class App:
                 logging.info("Command '%s' from plugin '%s' registered.", item_name, plugin_name)
 
     def start(self):
-        '''Start the application, initiate plugin loading, and start the REPL loop'''
+        '''This code start the application, initiate plugin loading, and start the REPL loop'''
         self.load_plugins()
         print("Type 'exit' to exit.")
 
